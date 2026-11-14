@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Erode Cleaning Services | Let us clean so you can relax</title>
+<meta name="description" content="Erode Cleaning Services (ECS): housekeeping and facility services for hospitals, offices, hotels, factories and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap">
+<style>
+/* ---------- 1. COLORS AND SIZES (change them here, the whole site updates) ---------- */
+:root{
+  --blue:#1553b8; --blue-deep:#0c2f6b; --sky:#e8f1fc; --green:#2c8a3e; --coral:#e2583a;
+  --ink:#14233b; --muted:#53627a; --bg:#ffffff; --card:#f5f9fe; --line:#d6e2f2;
+  --font:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0b1424;--card:#111f36;--sky:#13264a;--ink:#eaf1fb;--muted:#9fb1cc;--line:#223858;--blue:#5b94f0;}
+}
+:root[data-theme="dark"]{--bg:#0b1424;--card:#111f36;--sky:#13264a;--ink:#eaf1fb;--muted:#9fb1cc;--line:#223858;--blue:#5b94f0;}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.65;font-size:17px}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+h1,h2,h3{line-height:1.15;margin:0 0 14px;letter-spacing:-0.02em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800}
+p{margin:0 0 14px;max-width:62ch}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+
+/* ---------- 2. TOP BAR ---------- */
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;color:var(--blue)}
+.brand small{display:block;font-weight:500;color:var(--muted);font-size:.72rem;line-height:1}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--blue)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:8px 12px;color:var(--ink);font:inherit;font-weight:700}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--bg);flex-direction:column;align-items:flex-start;padding:16px 22px 22px;border-bottom:1px solid var(--line);gap:14px}
+  nav.open{display:flex}
+}
+
+/* ---------- 3. BUTTONS ---------- */
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:700}
+.btn-main{background:var(--coral);color:#fff}
+.btn-main:hover{background:#c8452a}
+.btn-line{border-color:#fff;color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+
+/* ---------- 4. HERO ---------- */
+.hero{background:linear-gradient(135deg,var(--blue-deep),var(--blue));color:#fff;padding:64px 0 80px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:800}
+.hero p{font-size:1.12rem;color:#d9e7ff}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero svg{width:100%;max-width:330px;justify-self:center}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.hero svg{max-width:210px;order:-1;justify-self:start}}
+.sparkle{animation:twinkle 2.6s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.sparkle:nth-of-type(2){animation-delay:.8s}.sparkle:nth-of-type(3){animation-delay:1.6s}
+@keyframes twinkle{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+@media(prefers-reduced-motion:reduce){.sparkle{animation:none}html{scroll-behavior:auto}}
+
+/* ---------- 5. TRUST STRIP ---------- */
+.strip{background:var(--sky);padding:22px 0}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:10px 34px;justify-content:space-between;font-weight:700;color:var(--blue)}
+.strip span{display:flex;align-items:center;gap:8px}
+.strip span::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green)}
+
+/* ---------- 6. ABOUT ---------- */
+.about .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px}
+@media(max-width:760px){.about .grid{grid-template-columns:1fr}}
+.vm{display:grid;gap:14px}
+.vm div{background:var(--card);border-left:5px solid var(--green);border-radius:6px 16px 16px 6px;padding:18px 20px}
+.vm div:nth-child(2){border-left-color:var(--coral)}
+.vm h3{font-size:1.1rem;margin-bottom:6px}
+.vm p{margin:0;color:var(--muted);font-size:.97rem}
+
+/* ---------- 7. SERVICES ---------- */
+.services{background:var(--card)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 38px;padding:0;list-style:none}
+.tags li{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-weight:500}
+.sub{font-size:1.15rem;font-weight:800;color:var(--blue);margin:0}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:18px}
+.more div{background:var(--blue-deep);color:#fff;border-radius:16px;padding:18px 20px;font-weight:700}
+.more div:nth-child(3n+2){background:var(--blue)}
+.more div:nth-child(3n){background:var(--green)}
+
+/* ---------- 8. CLIENTS ---------- */
+.clients ul{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 40px}
+.clients li{padding:16px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:1.05rem}
+.clients li small{display:block;font-weight:400;color:var(--muted)}
+
+/* ---------- 9. CONTACT ---------- */
+.contact{background:var(--blue-deep);color:#fff}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:760px){.contact .grid{grid-template-columns:1fr}}
+.contact p{color:#cfe0fb}
+.contact a.line{display:block;font-size:1.25rem;font-weight:800;text-decoration:none;margin:8px 0}
+form{display:grid;gap:12px}
+label{font-weight:700;font-size:.92rem}
+input,select,textarea{width:100%;padding:13px 14px;border-radius:12px;border:2px solid transparent;font:inherit;background:#fff;color:#14233b}
+textarea{min-height:96px;resize:vertical}
+.note{font-size:.88rem;color:#a9c3ee}
+
+/* ---------- 10. FOOTER ---------- */
+footer{background:#081f49;color:#9db6e0;text-align:center;padding:22px;font-size:.9rem}
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Erode Cleaning Services home">
+      <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#2c8a3e"/><path d="M14 27l6-9 6 9z" fill="#fff"/><rect x="17" y="9" width="6" height="7" rx="2" fill="#e2583a"/></svg>
+      <span>ECS<small>Erode Cleaning Services</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Let us clean, so you can relax.</h1>
+      <p>Cleaning and facility services for hospitals, offices, hotels, factories and shops in Erode and nearby towns.</p>
+      <div class="actions">
+        <a class="btn btn-main" href="tel:+919344401017">Call +91 93444 01017</a>
+        <a class="btn btn-line" href="#contact">Get a quote</a>
+      </div>
+    </div>
+    <!-- Simple spray bottle drawing (SVG = a picture made from code) -->
+    <svg viewBox="0 0 300 300" role="img" aria-label="Spray bottle with sparkles">
+      <circle cx="150" cy="150" r="140" fill="rgba(255,255,255,.1)"/>
+      <path d="M95 250V150q0-18 18-24h74q18 6 18 24v100q0 12-12 12H107q-12 0-12-12z" fill="#fff"/>
+      <rect x="110" y="170" width="80" height="60" rx="10" fill="#2c8a3e"/>
+      <rect x="128" y="96" width="44" height="34" rx="6" fill="#e2583a"/>
+      <path d="M128 104h-48q-12 0-12 10v6h60z" fill="#e2583a"/>
+      <path d="M150 62l5 14 14 5-14 5-5 14-5-14-14-5 14-5z" class="sparkle" fill="#fff"/>
+      <path d="M232 100l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" class="sparkle" fill="#fff"/>
+      <path d="M52 170l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" class="sparkle" fill="#fff"/>
+    </svg>
+  </div>
+</section>
+
+<div class="strip"><div class="wrap">
+  <span>Trained, experienced team</span><span>Quality, value for money</span><span>Trusted by hospitals</span><span>Neat and hygienic results</span>
+</div></div>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about"><div class="wrap grid">
+  <div>
+    <h2>A team that loves facility management</h2>
+    <p>We started as a passionate, experienced and dedicated team. Erode Cleaning Service (ECS) works with a wide range of corporate and commercial clients.</p>
+    <p>No matter your sector or how complex your needs are, we deliver a neat and hygienic environment.</p>
+  </div>
+  <div class="vm">
+    <div><h3>Our vision</h3><p>To be the best provider of excellent service, with high performance and good hygiene, and to put a smile on every customer's face through quality, value for money, dignity and pure service.</p></div>
+    <div><h3>Our mission</h3><p>To create and keep a clean, lasting physical environment so you can focus on your core business, with high ethics and social responsibility.</p></div>
+  </div>
+</div></section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services"><div class="wrap">
+  <h2>Where we clean</h2>
+  <p>From small local shops to corporate head offices, we use the right methods, chemicals and equipment for each place.</p>
+  <ul class="tags">
+    <li>Offices</li><li>Shops</li><li>Showrooms</li><li>Restaurants</li><li>Hotels</li><li>Hospitals</li><li>Airports</li>
+    <li>Factories</li><li>Industries</li><li>Classrooms</li><li>Theatres</li><li>Parks</li><li>Swimming pools</li>
+  </ul>
+
+  <p class="sub">What we clean</p>
+  <ul class="tags">
+    <li>Windows</li><li>Carpets and upholstery</li><li>Hard floors</li><li>Common areas</li><li>Blinds and curtains</li><li>Surfaces</li>
+  </ul>
+
+  <p class="sub">More services under one roof</p>
+  <div class="more">
+    <div>Housekeeping</div><div>Electrical and plumbing</div><div>Pantry</div><div>Security</div>
+    <div>Civil and maintenance</div><div>Carpentry</div><div>Lift operators</div>
+  </div>
+</div></section>
+
+<!-- ===== CLIENTS ===== -->
+<section class="clients" id="clients"><div class="wrap">
+  <h2>Trusted by healthcare teams</h2>
+  <p>Hospitals need the highest hygiene. These are some of the places that rely on us.</p>
+  <ul>
+    <li>Erode Cancer Center</li>
+    <li>Abirami Kidney Care</li>
+    <li>Acchutha Eye Care</li>
+    <li>Sakthi Hospital<small>Avinashi</small></li>
+    <li>Sakthi Nursing Home<small>Tirupur</small></li>
+    <li>Nephrocare Healthcare Services</li>
+  </ul>
+</div></section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact"><div class="wrap grid">
+  <div>
+    <h2>Talk to us today</h2>
+    <p>Tell us about your place and we will call you back with a plan and a price.</p>
+    <a class="line" href="tel:+919344401017">+91 93444 01017</a>
+    <a class="line" href="tel:+916379676813">+91 63796 76813</a>
+    <a class="line" href="mailto:erodecleaningservices@gmail.com" style="font-size:1rem">erodecleaningservices@gmail.com</a>
+  </div>
+
+  <!-- This form does not use a server. The script below builds a message and opens WhatsApp. -->
+  <form id="enquiry">
+    <div><label for="name">Your name</label><input id="name" required autocomplete="name"></div>
+    <div><label for="type">Type of place</label>
+      <select id="type"><option>Hospital or clinic</option><option>Office</option><option>Hotel or restaurant</option><option>Factory or industry</option><option>School or college</option><option>Shop or showroom</option><option>Other</option></select></div>
+    <div><label for="msg">What do you need?</label><textarea id="msg" placeholder="Example: daily housekeeping for a 20-bed hospital"></textarea></div>
+    <button class="btn btn-main" type="submit">Send on WhatsApp</button>
+    <span class="note">This opens WhatsApp with your message ready to send.</span>
+  </form>
+</div></section>
+</main>
+
+<footer>&copy; <span id="yr"></span> Erode Cleaning Services. All rights reserved.</footer>
+
+<script>
+/* 1. Phone menu: show or hide the links when the Menu button is tapped */
+const btn=document.getElementById('menuBtn'), nav=document.getElementById('nav');
+btn.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open)});
+nav.addEventListener('click',e=>{if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded',false)}});
+
+/* 2. Enquiry form: build a text message and open WhatsApp (number written without + or spaces) */
+document.getElementById('enquiry').addEventListener('submit',e=>{
+  e.preventDefault();
+  const text='Hello ECS, my name is '+name.value+'. Place: '+type.value+'. '+msg.value;
+  window.open('https://wa.me/919344401017?text='+encodeURIComponent(text),'_blank');
+});
+
+/* 3. Footer year updates itself */
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
